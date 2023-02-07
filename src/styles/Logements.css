@@ -5,49 +5,168 @@
 }
 
 
-/* Carousel d'image */
+.Logement__container {
+    max-width: 1240px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    color: #FF6060;
 
-
-
-.Carousel__container {
-    width: 100%;
-    height: 415px;
-    overflow: hidden;
-    position: relative;
-    border-radius: 25px;
-}
-
-.Carousel__image img {
-    width: 100%;
-    height: 415px;
-    object-fit: cover;
-}
-
-.Carousel__container__arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    font-size: 80px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    color: #FFF;
+    justify-content: space-between;
 }
 
-.Carousel__container__arrow--left {
-    left: 2%;
+
+/* Titre et Tags*/
+
+.Logement__container__titlestags {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 76%;
 }
 
-.Carousel__container__arrow--right {
-    right: 2%;
+/* Titre */
+
+
+.Logement__container__title h1
+{
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 51px;
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
-.Carousel__container__arrow:hover {
-    transform: translateY(-50%) scale(1.1);
-    filter: brightness(0.95);
+.Logement__container__title h2 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
+/* Tags */
+
+.Logement__container__tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-bottom: 24px;
+    gap: 10px;
+}
+
+.Logement__tag {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 28px;
+    background: #FF6060;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 5px 40px;
+    color: #FFFFFF;
+}
+
+
+
+
+
+/* Host Rates */
+
+.Logement__container__hostratings {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+/* Host */
+
+.Logement__container__host {
+    display: flex;
+    gap: 10px;
+
+}
+
+.Logement__container__host img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+}
+
+.Logement__container__host h3 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+    margin-top: 5px;
+    margin-bottom: 0;
+    text-align: right;
+    width: min-content;
+}
+
+
+/* Rates */
+
+.Logement__container__ratings {
+    margin-top: 20px;
+    margin-bottom: 24px;
+}
+
+
+
+/* Media queries */
+
+@media screen and (max-width: 768px) {
+
+    .Logement__container {
+        max-width: 335px;
+        flex-direction: column;
+        margin-top: 15px;
+    }
+
+    /* Titre et Tags*/
+
+    .Logement__container__titlestags {
+        max-width: 100%;
+    }
+
+    .Logement__container__title h1 {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .Logement__container__title h2 {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .Logement__tag {
+        font-size: 10px;
+        line-height: 14px;
+    }
+
+    /* Host et Rates */
+
+    .Logement__container__hostratings {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .Logement__container__ratings img {
+        width: 15px;
+        height: 15px;
+    }
+
+    .Logement__container__host h3 {
+        font-size: 12px;
+        line-height: 17px;
+        margin-top: 0;
+    }
+
+    .Logement__container__host img {
+        width: 32px;
+        height: 32px;
+    }
+
+}
