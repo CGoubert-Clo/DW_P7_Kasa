@@ -1,0 +1,56 @@
+.NotFound {
+    flex-grow: 1;
+    text-align: center;
+    color: #FF6060;
+    margin-bottom: 159px;
+}
+
+.NotFound h1 {
+    font-weight: 700;
+    font-size: 288px;
+    line-height: 411px;
+    margin-top: 64px;
+    margin-bottom: 88px;
+}
+
+.NotFound p {
+    font-weight: 500;
+    font-size: 36px;
+    line-height:51px
+}
+
+.NotFound a {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    color: #FF6060;
+    text-decoration: none;
+}
+
+.NotFound a:hover {
+    text-decoration: underline;
+}
+
+/*Media Queries*/
+
+@media (max-width: 768px) {
+
+    .NotFound {
+        margin-bottom: 0;
+    }
+    .NotFound h1 {
+        font-size: 96px;
+        line-height: 137px;
+        margin-top: 102px;
+        margin-bottom: 44px;
+    }
+    .NotFound p {
+        font-size: 18px;
+        line-height: 26px;
+        margin-bottom: 133px;
+    }
+    .NotFound a {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}

@@ -1,0 +1,54 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 7%;
+    padding-right: 7%;
+    margin-top: 40px;
+    margin-bottom: 63px;
+}
+
+.header--text {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 57px;
+    list-style-type: none;
+}
+
+.header--text a {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 34px;
+    color: #FF6060;
+}
+
+.header--text a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+
+    header {
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-top: 20px;
+        margin-bottom: 16px;
+    }
+
+    .header--logo {
+        width: 145px;
+        height: 47px;
+    }
+
+    .header--text {
+        gap: 10px;
+    }
+
+    .header--text a {
+        font-size: 12px;
+        line-height: 17px;
+    }
+
+}

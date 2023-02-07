@@ -1,0 +1,53 @@
+.Logement {
+    flex-grow: 1;
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+
+/* Carousel d'image */
+
+
+
+.Carousel__container {
+    width: 100%;
+    height: 415px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 25px;
+}
+
+.Carousel__image img {
+    width: 100%;
+    height: 415px;
+    object-fit: cover;
+}
+
+.Carousel__container__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #FFF;
+}
+
+.Carousel__container__arrow--left {
+    left: 2%;
+}
+
+.Carousel__container__arrow--right {
+    right: 2%;
+}
+
+.Carousel__container__arrow:hover {
+    transform: translateY(-50%) scale(1.1);
+    filter: brightness(0.95);
+}
+

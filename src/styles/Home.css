@@ -1,0 +1,130 @@
+.Home {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    padding-right: 7%;
+    padding-left: 7%;
+}
+
+.Home__banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+
+.Home__banner img {
+    border-radius: 25px;
+    width: 100%;
+    filter : brightness(70%)
+}
+
+.Home__banner h1 {
+    position: absolute;
+    font-size: 48px;
+    line-height: 68px;
+    color: #FFFFFF;
+    
+}
+
+
+
+/*Cartes*/
+
+.Home__cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 60px;
+    justify-content: center;
+    margin-top: 43px;
+    padding-bottom: 56px;
+    padding-top: 56px;
+    background: #F7F7F7;
+    border-radius: 25px;
+}
+
+
+
+
+/* Carte */
+
+
+.Card {
+    width: 340px;
+    height: 340px;
+    border-radius: 10px;
+    position: relative;
+}
+
+
+.Card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.Card h2 {
+    font-size: 18px;
+    line-height: 26px;
+    color: #FFFFFF;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    padding-right: 20%;
+}
+
+
+/*Media Queries*/
+
+@media screen and (max-width: 768px) {
+
+
+    .Home {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .Home__banner {
+        width: 100%;
+    }
+
+    .Home__banner h1 {
+        font-size: 24px;
+        line-height: 24px;
+        margin: 0;
+        width: 217px;
+        left: 32px;
+    }
+    
+    .Home__banner img {
+        height: 111px;
+        border-radius: 10px;
+    }
+
+
+    .Home__cards {
+        width: 100%;
+        background: none;
+        margin-top: 22px;
+        padding-top: 0;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .Card {
+        width: 100%;
+    }
+
+    .Card img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+}
