@@ -81,4 +81,10 @@
         height: 255px;
         border-radius: 10px;
     }
+
+    .Carousel__container__arrow {
+        width: 12px;
+        height: 20px;
+        font-size: 20px;
+    }
 }

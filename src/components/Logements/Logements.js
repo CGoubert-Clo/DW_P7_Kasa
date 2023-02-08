@@ -1,6 +1,7 @@
 import "../../styles/Carousel.css"
 import { useParams } from "react-router-dom"
 import Carousel from "./Carousel"
+import Dropdownlog from "./Dropdownlog"
 
 function Logements(props) {
     const { id } = useParams()
@@ -50,6 +51,10 @@ function Logements(props) {
                     </div>
                 </div>
             </div>
+            <div className="Logement__container__description">
+              <Dropdownlog logement={logement} />
+            </div>
+              
         </div>
     )
 }
