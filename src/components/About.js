@@ -1,10 +1,12 @@
 import "../styles/About.css"
+import DropDownAbout from "./DropDownAbout";
 
 function About() {
   return (
     <div className="About">
-      <h1>About</h1>
-      <p>This is the about page</p>
+      <div className="About__banner">
+            </div>
+      <DropDownAbout />
     </div>
   );
 }
