@@ -5,9 +5,9 @@ import { Routes, Route } from 'react-router-dom';
 
 import Home from './Home/Home';
 
-import About from './About';
+import About from './About/About';
 
-import NotFound from './NotFound';
+import NotFound from './NotFound/NotFound';
 
 import Logements from './Logements/Logements';
 
@@ -16,9 +16,10 @@ function Router(props) {
 
     return (
         <Routes>
-            <Route path="/" element={<Home logements={props.logements} />} />
+            <Route exact path="/" element={<Home logements={props.logements} />} />
             <Route path="/about" element={<About />} />
-            <Route path="/logement/:id" element={<Logements logements={props.logements} />} />            <Route path="*" element={<NotFound />} />
+            <Route path="*" element={<NotFound />} />
+            <Route path="/logement/:id" element={<Logements logements={props.logements} />} />
         </Routes>
     )
 }

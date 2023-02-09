@@ -1,0 +1,172 @@
+.Dropdown {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 14px;
+}
+
+
+.Dropdown__container {
+    width: 100%;
+    height: 100%;
+}
+
+.Dropdown__container__title {
+    background: #FF6060;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 2%;
+
+}
+
+.Dropdown__container__title h1 {
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+.Dropdown__container__content {
+    background: #F7F7F7;
+    font-weight: 400;
+    color: #FF6060;
+    padding-top: 30px;
+    padding-bottom: 27px;
+    padding-left: 20px;
+}
+
+.Dropdown__container__content p {
+    margin-top: 0;
+    margin-bottom: 8px;
+
+}
+
+
+
+/* Logement */
+
+.Dropdown__log {
+    display: flex;
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    gap: 6%;
+}
+
+.log__title__container, .log__content__container {
+    border-radius: 10px;
+}
+
+.log__title__container {
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+
+.log__title, .log__content {
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.arrow__log {
+    width: 16px;
+    height: 26px;
+}
+
+/* About */
+
+.Dropdown__about {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1023px;
+    margin: 0 auto;
+    margin-bottom: 14px;
+    gap: 32px;
+}
+
+.about__title__container, .about__content__container {
+    border-radius: 5px;
+}
+
+.about__title__container {
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.about__title {
+    margin-top: 5px;
+    margin-bottom: 7px;
+}
+
+.about__title, .about__content {
+    font-size: 24px;
+    line-height: 34px;
+}
+
+.about__arrow {
+    width: 30px;
+    height: 30px;
+}
+
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+    .Dropdown {
+        flex-direction: column;
+        max-width: 335px;
+        gap: 20px;
+        margin-bottom: 18px;
+    }
+
+
+    .Dropdown__container__title {
+        padding-right: 3%;
+    }
+
+
+    .Dropdown__container__title img {
+        width: 9px;
+        height: 15px;
+    }
+
+    .Dropdown__container__content {
+        padding-top: 18px;
+        padding-bottom: 2px;
+    }
+
+    /* Logement */
+
+    .Dropdown__log {
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 18px;
+    }
+
+    .log__title {
+        font-size: 13px;
+        line-height: 19px;
+    }
+
+    .log__content {
+        font-size: 12px;
+        line-height: 17px;
+    }
+
+    /* About */
+
+   
+    .Dropdown__about {
+        gap: 20px;
+    }
+
+    .about__title {
+        font-size: 13px;
+        line-height: 19px;
+    }
+
+    .about__content {
+        font-size: 12px;
+        line-height: 17px;
+    }
+}

@@ -1,16 +1,30 @@
 import Router from './Router';
 import '../styles/App.css';
-import Logements from "../data/logements.json"
 
 
-import Header from './Header';
-import Footer from './Footer';
+import Header from './Header/Header';
+import Footer from './Footer/Footer';
+import { useEffect } from 'react';
+import { useState } from 'react';
 
 function App() {
+
+  const [logements, setLogements] = useState([])
+
+  useEffect(() => {
+    fetch('./logements.json')
+      .then(response => response.json())
+      .then(data => {
+        setLogements(data)
+      }
+      )
+  }, [])
+
+
   return (
     <div className="App">
       <Header />
-      <Router logements={Logements} />
+      <Router logements={logements} />
       <Footer />
     </div>
   );

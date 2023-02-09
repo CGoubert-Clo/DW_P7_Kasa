@@ -1,10 +1,9 @@
 import Card from "./Card"
-import "../../styles/Home.css"
-import Logements from "../../data/logements.json"
+import "./Home.css"
 
-function Home() {
+function Home(props) {
 
-    const cards = Logements.map((logement) => {
+    const cards = props.logements.map((logement) => {
         return <Card key={logement.id} logement={logement} />
     })
 

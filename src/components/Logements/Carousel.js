@@ -1,19 +1,30 @@
-import React, { useState } from "react";
-import "../../styles/Logements.css";
+import React, { useState } from "react"
+import "./Logements.css"
 
 function Carousel(props) {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const pictures = props.logement.pictures.map((image, index) => (
+
+  const [currentIndex, setCurrentIndex] = useState(0)
+
+  const pictures = props.picture.map((image, index) => (
     <img src={image} alt="logement" key={index} className={index === currentIndex ? "active" : ""}/>
-  ));
+  ))
+
+
+
 
   const handlePrev = () => {
-    setCurrentIndex((currentIndex + pictures.length - 1) % pictures.length); 
-  };
+    setCurrentIndex( prevCurrentIndex => {
+      return (prevCurrentIndex + pictures.length - 1) % pictures.length
+    })
+  }
 
   const handleNext = () => {
-    setCurrentIndex((currentIndex + 1) % pictures.length);
-  };
+    setCurrentIndex( prevCurrentIndex => {
+      return (prevCurrentIndex + 1) % pictures.length
+    })
+  }
+
+  
 
   return (
     <div className="Carousel">
