@@ -28,10 +28,6 @@
     height: 223px;
 }
 
-.About__banner img {
-    
-}
-
 
 /* Media queries */
 
@@ -40,6 +36,7 @@
 @media (max-width: 768px) {
     .About__banner {
         width: 100%;
+        background-image: url(../../../public/images/about/banner-mobile.jpg);
     }
     
     .About__banner img {

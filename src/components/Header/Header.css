@@ -51,6 +51,7 @@ header {
 
     .header--text {
         gap: 10px;
+        text-transform: uppercase;   
     }
 
     .header--text a {

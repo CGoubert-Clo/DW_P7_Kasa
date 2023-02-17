@@ -129,20 +129,13 @@
 
         .Card {
             width: 100%;
-            max-width: 453.33px;
             max-height: 255px;
         }
     
 
     .Card img {
-        width: auto;
+        width: 600px;
         max-width: 100%;
     }
     
 }
-
-@media screen and (max-width: 768px) {
-
-
-
-    }

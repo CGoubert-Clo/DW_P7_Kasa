@@ -11,7 +11,6 @@ function App() {
 
   const [logements, setLogements] = useState([])
   const [isLoading, setIsLoading] = useState(true)
-  // const [errMsg, setErrMsg] = useState()
 
   useEffect(() => {
     fetch('/logements.json')
@@ -28,8 +27,6 @@ function App() {
   }, [])
 
 
-
-  // if (errMsg) return <div>{errMsg}</div>
 
   if (isLoading) return <div>Loading...</div>
 

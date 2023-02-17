@@ -1,9 +1,7 @@
 import "./Logements.css"
-import { useParams, useNavigate, Navigate } from "react-router-dom"
+import { useParams, Navigate } from "react-router-dom"
 import Carousel from "./Carousel/Carousel"
 import Dropdown from "../DropDown/Dropdown"
-import NotFound from "../NotFound/NotFound"
-import { useState } from "react"
 
 function Logements(props) {
 
@@ -13,22 +11,8 @@ function Logements(props) {
 
 
 
-    const [isDescriptionOpen, setIsDescriptionOpen] = useState(false)
-    const [isEquipmentsOpen, setIsEquipmentsOpen] = useState(false)
-
-    const handleDescriptionClick = () => {
-        setIsDescriptionOpen(!isDescriptionOpen)
-    }
-
-    const handleEquipmentsClick = () => {
-        setIsEquipmentsOpen(!isEquipmentsOpen)
-    }
-
-    
-
-
     if (!logement && props.logements.length > 0) {
-        return  <Navigate to="/44" />
+        return  <Navigate to="/404" />
     }
 
 
@@ -81,45 +65,27 @@ function Logements(props) {
                         </div>
                     </div>
                 </div>
+
+
             <div className="Logement__container__description">
+            <div className="Dropdown">
+                <div className="Dropdown__log">
 
-
-
-                <Dropdown>
-                    <div className="Dropdown__log">
-                        <div className="Dropdown__container">
-                            <div className="Dropdown__container__title log__title__container">
-                                <h1 className="log__title">Description</h1>
-                                <img src={isDescriptionOpen ? `${process.env.PUBLIC_URL}/images/logements/arrow-top.svg` : `${process.env.PUBLIC_URL}/images/logements/arrow-bottom.svg`} alt="arrow" onClick={handleDescriptionClick} className="arrow__log"/>
-                            </div>
-
-                            {isDescriptionOpen && 
-                            <div className="Dropdown__container__content log__content__container">
+                <Dropdown title="Description">
                                 <p className="log__content">{logement.description}</p>
-                            </div>
-                            }
-                        </div>
-                        <div className="Dropdown__container">
-                            <div className="Dropdown__container__title log__title__container">
-                                <h1 className="log__title">Equipements</h1>
-                                <img src={isEquipmentsOpen ? `${process.env.PUBLIC_URL}/images/logements/arrow-top.svg` : `${process.env.PUBLIC_URL}/images/logements/arrow-bottom.svg`} alt="arrow" onClick={handleEquipmentsClick} className="arrow__log"/>
-                            </div>
-
-                            {isEquipmentsOpen &&
-                            <div className="Dropdown__container__content log__content__container">
+                </Dropdown>
+    
+                <Dropdown title="Equipements">
                                 {logement.equipments.map((equipment) => (
                                     <div className="Dropdown__container__content__equipment" key={equipment + logement.equipments.length + 1}>
                                         <p className="log__content">{equipment}</p>
                                     </div>
                                 ))}
-                            </div>
-                            }
-                        </div>
-                    </div>
                 </Dropdown>
 
+            </div>
 
-
+            </div>
             </div>
               
         </div>
