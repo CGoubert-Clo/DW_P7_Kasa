@@ -30,7 +30,7 @@ function About() {
     <div className="About">
       <div className="About__banner">
             </div>
-      <DropDown>
+      <DropDown title="Fiabilité"  >
         <div className="Dropdown__about">  
           <div className="Dropdown__container">
             <div className="Dropdown__container__title about__title__container">

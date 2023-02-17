@@ -1,6 +1,6 @@
-import "./Carousel.css"
-import { useParams } from "react-router-dom"
-import Carousel from "./Carousel"
+import "./Logements.css"
+import { useParams, useNavigate, Navigate } from "react-router-dom"
+import Carousel from "./Carousel/Carousel"
 import Dropdown from "../DropDown/Dropdown"
 import NotFound from "../NotFound/NotFound"
 import { useState } from "react"
@@ -24,9 +24,11 @@ function Logements(props) {
         setIsEquipmentsOpen(!isEquipmentsOpen)
     }
 
+    
 
-    if (!logement) {
-        return  <NotFound />
+
+    if (!logement && props.logements.length > 0) {
+        return  <Navigate to="/44" />
     }
 
 
@@ -38,7 +40,7 @@ function Logements(props) {
     ))
 
 
-
+    
     const stars = []
     for (let i = 0; i < 5; i++) {
         if (i < logement.rating) {

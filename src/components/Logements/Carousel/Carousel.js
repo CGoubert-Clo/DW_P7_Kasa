@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import "./Logements.css"
+import "./Carousel.css"
 
 function Carousel(props) {
 
