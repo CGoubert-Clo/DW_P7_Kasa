@@ -30,13 +30,15 @@ function Carousel(props) {
     <div className="Carousel">
       <div className="Carousel__container">
         { pictures.length > 1 &&
-        <div className="Carousel__container__arrow Carousel__container__arrow--left" onClick={handlePrev}>
-          <i className="fas fa-chevron-left"></i>
-        </div>}
+          <button className="Carousel__container__arrow Carousel__container__arrow--left" onClick={handlePrev}>
+            <i className="fas fa-chevron-left"></i>
+          </button>
+        }
         {pictures.length > 1 &&
-        <div className="Carousel__container__arrow Carousel__container__arrow--right" onClick={handleNext}>
+          <button className="Carousel__container__arrow Carousel__container__arrow--right" onClick={handleNext}>
           <i className="fas fa-chevron-right"></i>
-        </div> }
+          </button>
+        }
         <div className="Carousel__container__image">
           {pictures[currentIndex]}
         </div>

@@ -13,11 +13,14 @@
 
 .Dropdown__container__title {
     background: #FF6060;
+    padding-right: 2%;
+    cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-right: 2%;
-
+    width: 100%;
+    border: none;
+    cursor: pointer;
 }
 
 .Dropdown__container__title h1 {

@@ -28,7 +28,11 @@
     width: 90vw;
 }
 
+
 .Carousel__container__arrow {
+    appearance: none;
+    background: none;
+    border: none;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);

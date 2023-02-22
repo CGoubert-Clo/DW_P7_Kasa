@@ -12,8 +12,8 @@ function Dropdownlog({children, ...props}) {
     const [isOpen, setIsOpen] = useState(false)
  
 
-    const handleClick = (e) => {
-        if (e.target.id === "fiabilite") {
+    const handleClick = (e) => { 
+        if (e.target.id === "dropdown__button") {
             setIsOpen(!isOpen)
         }
     }
@@ -26,10 +26,10 @@ function Dropdownlog({children, ...props}) {
 
             <div className="Dropdown__container">
 
-                <div className={page === "about" ? "Dropdown__container__title about__title__container" : "Dropdown__container__title log__title__container"}>
+                <button className={page === "about" ? "Dropdown__container__title about__title__container" : "Dropdown__container__title log__title__container"} onClick={handleClick} id="dropdown__button">
                     <h1 className={page === "about" ? "about__title" : "log__title"}>{title}</h1>
-                    <img src={isOpen? `${process.env.PUBLIC_URL}/images/logements/arrow-top.svg` : `${process.env.PUBLIC_URL}/images/logements/arrow-bottom.svg`} alt="arrow" onClick={handleClick} id="fiabilite"  className="about__arrow"/>
-                </div>
+                    <img src={isOpen? `${process.env.PUBLIC_URL}/images/logements/arrow-top.svg` : `${process.env.PUBLIC_URL}/images/logements/arrow-bottom.svg`} alt="arrow" className="about__arrow"/>
+                </button>
 
                 {isOpen &&
                     <div className={page === "about" ? "Dropdown__container__content about__content__container" : "Dropdown__container__content log__content__container"}>
