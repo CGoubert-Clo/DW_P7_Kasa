@@ -41,6 +41,7 @@ function Carousel(props) {
         }
         <div className="Carousel__container__image">
           {pictures[currentIndex]}
+          <p className="Carousel__number">{currentIndex +1}/{pictures.length}</p>
         </div>
       </div>
     </div>
